@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Manual de usuario</title>
+</head>
+<body>
+    <h1>Manual de usuario para soporte técnico</h1>
+
+    <h3>¿Qué es un manual?</h3>
+
+    <p>Un manual es una publicación que incluye los aspectos fundamentales de una materia. Se trata de una guía que ayuda a entender el funcionamiento de algo, o bien que educa a sus lectores acerca de un tema de forma ordenada y concisa. Un usuario es, por otra parte, la persona que usa ordinariamente algo o que es destinataria de un producto o de un servicio.</p>
+
+    <h3>¿Qué es el soporte técnico?</h3>
+
+    <p>El soporte técnico es un área que proporciona asistencia a los usuarios al tener algún problema al utilizar un producto o servicio, ya sea este el hardware o software de una computadora, de un servidor de Internet, de los periféricos, o de cualquier otro equipo o dispositivo.</p>
+
+    <h3>Diagnosticar falla de hardware en software libre</h3>
+
+    <p>Primero para clarificar mejor vamos  a definirlos en dos categorías. A los problemas que hacen que un sistema no esté online, es decir no tenemos acceso a los servicios o SSH los llamaremos de tipo A. Y las incidencias donde el sistema aun está online y podemos acceder por SSH, pero por ejemplo de vez en cuando se reinicia, o se caen servicios, etc.. a estos los llamaremos de tipo B.</p>
+
+    <h5>TIPO A (No podemos acceder)</h5>
+
+    <p>Para los de tipo A lo primero que tenemos que hacer es tratar de reiniciar el servidor. La mayoría de proveedores permiten esto, e incluso algunos permiten hacer un soft reset (en caliente), donde se le indica al sistema operativo que debe reiniciarse. También, si el proveedor lo permite es mejor arrancar el sistema en un modo rescate que no use el disco duro, para poder hacer pruebas y revisarlo más detenidamente.</p>
+
+    <p>En caso que al reiniciarlo o activar el modo rescate siga sin estar accesible por el puerto de administración, ya será necesario contactar con el soporte que tengamos en el centro de datos ya que por nuestra parte no hay nada mas que podamos hacer.</p>
+
+    <p>Respecto a los reinicios en frío nos gustaría comentar dos cosas, la primera es que no hay que abusar de ellos porque son perjudiciales para el hardware. Suponen un corte en la alimentación de los dispositivos utilizados y esto puede generar más problemas, normalmente en discos duros pero también en el resto. Lo segundo es que al reiniciar un sistema linux, si este llevaba mucho tiempo encendido, es posible que necesite chequear automáticamente la estructura de ficheros en los discos y el arranque tarde un tiempo en completarse. Por tanto si se ha reiniciado de forma normal (no en modo rescate) habrá que esperar al menos de 30 a 60 minutos de inactividad para contactar con el soporte del proveedor. Por esto siempre es mejor arrancarlo en modo rescate si se tiene la posibilidad.</p>
+
+    <h5>TIPO B (Podemos acceder)</h5>
+
+    <p>Si por el contrario podemos acceder, estamos ante un problema tipo B que puede o no ser de hardware, aun tendremos que determinarlo. Cosas que podemos hacer:</p>
+
+    <ul type="square">
+        <li>Ver si ha quedado registrado algún error.</li>
+    </ul>
+
+    <p>Para ello debemos ver las entradas sospechosas en el log del sistema, que suele ser el fichero /var/log/syslog o /var/log/messages. Lo normal es buscar por fecha y hora sabiendo cuando ha empezado el problema que nos ha llevado hasta aquí.</p>
+
+    <p>Si no sabemos con exactitud cuando buscar podemos filtrar por la palabra error, por ejemplo:</p>
+
+    <p style="font-family: consolas;">grep -i error /var/log/messages</p>
+
+    <p>Y aquí nos tendría que salir alguna cosa para determinar de donde proviene el fallo,</p>
+
+    <ul type="square">
+        <li>Utilizar SMART para buscar errores en los discos duros.</li>
+    </ul>
+
+    <p>Si los discos duros soportan la tecnología SMART es posible ver su estado de forma muy fácil, utilizando el comando:</p>
+
+    <p style="font-family: consolas;">smartctl -a /dev/dispositivo</p>
+
+    <p class="nota"><strong>NOTA: </strong>La tecnología SMART (siglas de Self Monitoring Analysis and Reporting Technology), consiste en la capacidad de detección de fallos del disco duro. Este tipo de tecnología tiene que ser compatible con el BIOS del equipo, estar activada y además que el propio disco duro sea compatible.</p>
+
+    <ul type="square">
+        <li>Visualizar los sensores de temperatura, rpm y demás que haya configurados en el sistema.</li>
+    </ul>
+
+    <p>Para ello podemos instalar la aplicación lm-sensors que suele estar en los repositorios de las distribuciones más usadas.</p>
+
+    <p>Si con todo esto seguimos sin detectar que puede estar sucediendo convendría arrancar el  sistema en modo rescate o de alguna forma que nos permita desmontar el disco duro y revisarlo a fondo sin todos los servicios en funcionamiento.</p>
+</body>
+</html>
+
+<style>
+    * {
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    .nota {
+        margin: 20px;
+        padding: 2 2 2 2; 
+        background-color: yellow;    
+    }
+</style>
