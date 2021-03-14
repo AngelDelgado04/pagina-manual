@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Diagnosticar problemas de harware y software</title>
+</head>
+<body>
+
+    <header id="inicio">
+		<nav>
+			<ul id="menu">
+				<li><a href="/index.html">Inicio</a></li>
+				<li><a href="/diagnosticar-problemas.html">Diagnosticar problemas de harware y software</a>
+					<ul id="barra">
+						<li><a href="/diagnosticar-problemas.html#windows">Windows</a></li>
+						<li><a href="/diagnosticar-problemas.html#libre">Software libre</a></li>
+					</ul>
+                <li><a href="">Partes del computador</a></li>
+                <li><a href="">Herramientas para soporte tecnico</a></li>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+    <h1>¿Cómo diagnosticar problemas de Hardware y Software en mi PC?</h1>
+
+    <p>La abstracta composición de un computador dificulta determinar cuándo se manifiesta un problema de Hardware o Software, al igual que saber qué es lo que lo ocasiona.</p>
+
+    <p>Generalmente se considera que para detectar y solucionar este tipo de situaciones se requiere de un grado de conocimiento en informática. Sin embargo, los ordenadores (sobretodo Windows) poseen un patrón que facilita diagnosticar el tipo de problema que se presenta.</p>
+
+    <h3>Diferencias entre un problema de Hardware y Software</h3>
+
+    <p>Dado que debes saber diferenciar cada una, es necesario definir aspectos, pues dependiendo sus funciones surgirán las tendencias a ciertos tipos de problemas.</p>
+
+    <h5>¿Qué es el software?</h5>
+
+    <p>Considerado como un controlador, el software es quien se encarga de formar parte de todas las aplicaciones que contiene el ordenador.</p>
+
+    <p>Esto incluye el sistema operativo, por lo que muchos componentes físicos que constituyen el hardware se deben directamente a las órdenes que sean realizadas por él.</p>
+
+    <h5>¿Qué es el hardware?</h5>
+
+    <p>Como fue mencionado en el punto anterior, esta sección es la que compone el equipo y los componentes del computador. A pesar que su función es primordial para que el computador se ejecute de manera óptima, se encuentra suscrito a las órdenes que sean demandadas por los programas que constituyen el sistema operativo, y las tareas ejecutadas por el usuario.</p>
+
+    <p>Tomando en cuenta esto, conocer el origen del problema de hardware o software que necesita diagnosticarse, es lo que puede ayudar a solucionarlo de forma rápida y eficiente.</p>
+
+    <h2><a name="windows"> ¿Cuáles herramientas ofrece Windows para diagnosticar un problema de Hardware o Software?</h2>
+
+    <p>Ya sea que el ordenador corre a una velocidad muy baja o el sistema se encarga de anunciar un problema a través de medidas drásticas, Windows está preparado para detectar y solucionar cada uno de estos aspectos.</p>
+
+    <h5>Diagnosticar la memoria RAM del equipo</h5>
+
+    <p>Puede ocurrir que mientras estés utilizando el ordenador la carga de los archivos tarde demasiado, dejen de responder los programas o colapsen de la nada.</p>
+    <p>Cada una de estas posibles situaciones se debe a la memoria RAM, un complemento de característica hardware que puede ser diagnosticado a través de una herramienta del SO. Aunque se encuentre oculta a simple vista, es conocida como Diagnóstico de memoria de Windows, la cual se encarga de buscar posibles problemas dentro de ella.</p>
+
+    <p>Para empezar, debes cerrar todos los programas que estés utilizando en el computador, de manera que al ejecutarse no presente ningún fallo. En el buscador que se encuentra dentro del menú de inicio, inserta el nombre de la herramienta y haz clic sobre ella cuando aparezca.</p>
+
+    <p>En la pantalla se desplegará una pequeña ventana que te dará la opción de “Reiniciar ahora y comprobar si existen problemas”, la cual deberás seleccionar.</p>
+
+    <p>A continuación, el equipo se reiniciará y el diagnóstico tomará máximo media hora en realizarse, arrojando los resultados una vez que termine de iniciar Windows. Sea el caso de que muestre un problema, estará acompañado de instrucciones para solucionarlo.</p>
+
+    <h5>Chequeo del HDD</h5>
+
+    <p>De forma predeterminada, Windows no tiene una utilidad incorporada para esto. Sin embargo, puedes echar mano de la interfaz de línea de comandos.</p>
+    
+    <ol>
+        <li>Has clic derecho en el botón Inicio y selecciona Símbolo del sistema (administrador).</li>
+        <li>Escribe el comando <strong>wmic</strong> y pulsa Intro.</li>
+        <li>Escribe el comando <strong>diskdrive get status</strong> y pulsa Intro.</li>
+        <li>El S.M.A.R.T de tu disco duro se mostrará en pocos momentos.</li>
+    </ol>
+        
+    <p>Si está bien, entonces no tienes de que preocuparte. Si notas cualquier error no debes entrar en pánico. El error es una señal de que tu disco duro tiene sólo pocos tiempo de vida. Sin embargo, el tiempo puede ser días, meses e incluso años. Puedes utilizar este tiempo para la copia de seguridad de tus datos a otro lugar y crear una imagen del sistema que te permitirán restaurarlo si se produce un fallo del disco duro.</p>
+        
+    <p>Si no te gusta la interfaz de línea de comandos, entonces te sugiero herramientas de otros fabricantes como <u>CrystalDiskInfo</u> y <u>HDD Health</u>, estas pueden extraer la información de S.M.A.R.T de tu disco duro.</p>
+
+    <h5>Análisis integral del ordenador</h5>
+
+    <p>Debido a que el aspecto anterior se enfoca únicamente en un objeto en específico, Windows también ha creado un programa que analiza de manera universal el ordenador.</p>
+
+    <p>A través de esto podrás evaluar si existen otros problemas de hardware o software en tu equipo, aunque deberás tener un poco de conocimiento sobre tecnología para interpretar correctamente los resultados.</p>
+
+    <p>Igual que en el método anterior, ingresa en el buscador de “Inicio” el programa denominado “Usar herramientas para mejorar el rendimiento”.</p>
+
+    <p>Una vez hayas abierto la ventana, del lado izquierdo encontrarás la opción de “Herramientas avanzadas”. Allí harás clic sobre la opción de “Generar un informe de mantenimiento del sistema”.</p>
+
+    <p>El tiempo de espera es muy mínimo, y este resultado se encarga de mostrar cada uno de los errores que posee el sistema. Cada problema estará acompañado de un signo de suma para otorgarte mayor detalle, al igual que una serie de recomendaciones para solucionarlo fácilmente. Finalmente, conseguirás haber diagnosticado los distintos tipos de problemas de Hardware o Software que pueda presentar tu ordenador.</p>
+
+    <hr>
+
+    <h3><a name="libre">Diagnosticar falla de hardware y software en software libre</h3>
+
+    <h4>Problemas de hardware:</h4>
+
+    <p>Primero para clarificar mejor vamos  a definirlos en dos categorías. A los problemas que hacen que un sistema no esté online, es decir no tenemos acceso a los servicios o SSH los llamaremos de tipo A. Y las incidencias donde el sistema aun está online y podemos acceder por SSH, pero por ejemplo de vez en cuando se reinicia, o se caen servicios, etc.. a estos los llamaremos de tipo B.</p>
+
+    <h5>TIPO A (No podemos acceder)</h5>
+
+    <p>Para los de tipo A lo primero que tenemos que hacer es tratar de reiniciar el servidor. La mayoría de proveedores permiten esto, e incluso algunos permiten hacer un soft reset (en caliente), donde se le indica al sistema operativo que debe reiniciarse. También, si el proveedor lo permite es mejor arrancar el sistema en un modo rescate que no use el disco duro, para poder hacer pruebas y revisarlo más detenidamente.</p>
+
+    <p>En caso que al reiniciarlo o activar el modo rescate siga sin estar accesible por el puerto de administración, ya será necesario contactar con el soporte que tengamos en el centro de datos ya que por nuestra parte no hay nada mas que podamos hacer.</p>
+
+    <p>Respecto a los reinicios en frío nos gustaría comentar dos cosas, la primera es que no hay que abusar de ellos porque son perjudiciales para el hardware. Suponen un corte en la alimentación de los dispositivos utilizados y esto puede generar más problemas, normalmente en discos duros pero también en el resto. Lo segundo es que al reiniciar un sistema linux, si este llevaba mucho tiempo encendido, es posible que necesite chequear automáticamente la estructura de ficheros en los discos y el arranque tarde un tiempo en completarse. Por tanto si se ha reiniciado de forma normal (no en modo rescate) habrá que esperar al menos de 30 a 60 minutos de inactividad para contactar con el soporte del proveedor. Por esto siempre es mejor arrancarlo en modo rescate si se tiene la posibilidad.</p>
+
+    <h5>TIPO B (Podemos acceder)</h5>
+
+    <p>Si por el contrario podemos acceder, estamos ante un problema tipo B que puede o no ser de hardware, aun tendremos que determinarlo. Cosas que podemos hacer:</p>
+
+    <ul type="square">
+        <li>Ver si ha quedado registrado algún error.</li>
+    </ul>
+
+    <p>Para ello debemos ver las entradas sospechosas en el log del sistema, que suele ser el fichero /var/log/syslog o /var/log/messages. Lo normal es buscar por fecha y hora sabiendo cuando ha empezado el problema que nos ha llevado hasta aquí.</p>
+
+    <p>Si no sabemos con exactitud cuando buscar podemos filtrar por la palabra error, por ejemplo:</p>
+
+    <p style="font-family: consolas;">grep -i error /var/log/messages</p>
+
+    <p>Y aquí nos tendría que salir alguna cosa para determinar de donde proviene el fallo,</p>
+
+    <ul type="square">
+        <li>Utilizar SMART para buscar errores en los discos duros.</li>
+    </ul>
+
+    <p>Si los discos duros soportan la tecnología SMART es posible ver su estado de forma muy fácil, utilizando el comando:</p>
+
+    <p style="font-family: consolas !important;">smartctl -a /dev/dispositivo</p>
+
+    <p class="nota"><strong>NOTA: </strong>La tecnología SMART (siglas de Self Monitoring Analysis and Reporting Technology), consiste en la capacidad de detección de fallos del disco duro. Este tipo de tecnología tiene que ser compatible con el BIOS del equipo, estar activada y además que el propio disco duro sea compatible.</p>
+
+    <ul type="square">
+        <li>Visualizar los sensores de temperatura, rpm y demás que haya configurados en el sistema.</li>
+    </ul>
+
+    <p>Para ello podemos instalar la aplicación lm-sensors que suele estar en los repositorios de las distribuciones más usadas.</p>
+
+    <p>Si con todo esto seguimos sin detectar que puede estar sucediendo convendría arrancar el  sistema en modo rescate o de alguna forma que nos permita desmontar el disco duro y revisarlo a fondo sin todos los servicios en funcionamiento.</p>
+
+    <h4>Problemas de software</h4>
+
+    <p>Ubuntu Linux trae integrada una herramienta para la comprobación memoria, Memtest86+. Para iniciar Memtest86+ debes seguir los siguientes pasos:</p>
+    
+    <ol>
+        <li>Reinicia tu computadora. Durante el proceso de reinicio, pulsa y mantén pulsada la tecla SHIFT en la pantalla de arranque.</li>
+        <li>Al final en la pantalla de Grub puedes encontrar Memtest86+.</li>
+        <li>Desplázate hacia Memtest86 + y pulsa Enter. La opción de la consola es para Acceso remoto.</li>
+        <li>El proceso de verificación de la RAM tardará unos minutos en completarse.</li>
+    </ol>
+
+    <h4>Herramienta todo en uno para diagnostico.</h4>
+
+    <p>Checkbox: Si has instalado Ubuntu en tu computadora, tú dispones de Checkbox, herramienta incorporada que hace el trabajo de encontrar errores de hardware en diferentes componentes de la máquina.</p>
+
+    <p>Si no tienes instalado Checkbox o no sabes usarla aqui te dejo el <a href="https://checkbox.readthedocs.io/en/latest/">enlace</a> a la pagina oficial de la aplicacion.</p>
+
+    <p>Presiona <a href="#inicio">aqui</a> para ir al inicio</p>
+
+    <hr>
+
+    <footer>
+        <address>
+            Alumnos: Angel Delgado. C.I:30.074.007. Brayan Escobar. C.I: 29.654.148. Proyecto.
+        </address>
+    </footer>
+</body>
+</html>
+
+<style>
+    * {
+        font-family:Arial, Helvetica, sans-serif;
+        text-align: justify;
+    }
+    .nota {
+        margin: 20px;
+        padding: 2 2 2 2; 
+        background-color: yellow;    
+        border-width: 1px;
+        border-color: black;
+        border-style: solid;
+    }
+
+    header {
+		margin: auto;
+        width: 100%;
+	}
+
+    #barra {
+		list-style: none;
+        
+	}
+
+	#menu li>a {
+		background-color: grey;
+		color: white;
+		text-decoration: none;
+		padding: 11px;
+		display: block;
+        min-width: 100%;
+        border-width: 1px;
+        border-color: black;
+        border-style: solid;
+        }
+
+	#menu li>a:hover {
+		color: #000;
+		background-color: #eaeaea;
+        
+	}
+
+	#menu>li {
+		text-align: center;
+		display: inline-block;
+        min-width: 21%;
+	}
+
+	#menu>li>ul {
+		display: none;
+		position: absolute;
+		width: auto;
+        
+	}
+
+	#menu>li:hover>ul {
+		display: block;
+        min-width: 20%;
+	}
+</style>
